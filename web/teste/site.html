@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="facebook.png">
+    
+    <link rel="shortcut icon" href="avatar.ico" type="image/x-icon" />
+
+    <style type="text/css">
+    titulo{
+        font-style: oblique;
+        color: white;
+        text-align: center;
+    }
+
+    abas{
+        font-style: olique;
+        color: red;
+    }
+
+    </style>
+
+    <title>Portifólio</title>
+</head>
+
+<body style="background-color:black;">
+    <header></header>
+
+    <div>
+        <img src="https://avatars0.githubusercontent.com/u/48382353?s=460&u=fdfe3245079c1c69c199c03c640cfaf3d9fc066c&v=4" align="left" avatar.png" title="Avatar" height="200" width="200">
+        <titulo>Mateus Vieites de Jesus</titulo>
+        <nav> 
+            <a href wm-nav="textos/projetos.html"><abas>Projetos</abas></a>
+        </nav>
+        <section id="conteudo"></section>
+    </div>
+
+    <a href="https://www.facebook.com/mateus.v.jesus.3"><img src="imagens/facebook.png" facebook.png" title="Facebook" height="75" width="75" style="margin-left:-205px; margin-top:200px;"></a>
+    <a href="https://www.instagram.com/mateus_vieites/"><img src="imagens/insta.png" insta.png" title="Instagram" height="75" width="75"></a>
+    <a href="https://github.com/mateusvieites"><img src="imagens/github.png" github.png" title="imagens/github.png" height="75" width="75"></a>
+    <a href="https://br.linkedin.com/in/mateus-vieites-de-jesus-645666175"><img src="imagens/linkedin.png" linkedinpng"  title="Linkedin" height="75" width="75"></a>
+    <br><titulo style="margin-left:175px; margin-top:175px;"> texto <titulo><br>
+    <footer>
+
+    </footer>
+    <SCRIPT>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e){
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </SCRIPT>
+</body>
+</html>
