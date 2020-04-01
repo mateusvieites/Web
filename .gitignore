@@ -1,1 +1,10 @@
+# IDE
+.idea
+./.vscode
 
+# Files
+.class
+.exe
+
+# Archves
+node_modules
